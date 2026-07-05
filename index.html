@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Cats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">🌤️ Weather & Cats 🐱</h1>
+                <p class="app-subtitle">Discover weather data with adorable feline companions</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="input-group">
+                        <input type="text" id="locationInput" placeholder="Enter city (e.g., London) or coordinates (e.g., 51.5,-0.1)" class="search-input">
+                        <button id="randomRecommendationBtn" class="search-btn">
+                            <span class="btn-icon">🔍</span>
+                            <span class="btn-text">Search</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <div id="random-recommendation" class="weather-card"></div>
+            </section>
+
+            <section class="favorites-section">
+                <div class="favorites-container">
+                    <h2 class="section-title">⭐ Favorites</h2>
+                    <div id="favorites-list" class="favorites-grid"></div>
+                </div>
+            </section>
+
+            <section class="chart-section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h2 class="chart-title">📊 Temperature & Humidity Comparison</h2>
+                        <div class="chart-controls">
+                            <select id="chartType" class="chart-type-select">
+                                <option value="bar">Bar Chart</option>
+                                <option value="line">Line Chart</option>
+                                <option value="radar">Radar Chart</option>
+                            </select>
+                            <select id="dataType" class="chart-type-select">
+                                <option value="both">Both Temperature & Humidity</option>
+                                <option value="temperature">Temperature Only</option>
+                                <option value="humidity">Humidity Only</option>
+                            </select>
+                            <button id="clearChartBtn" class="clear-btn">Clear Chart</button>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="weatherChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>Made with ❤️ using OpenWeatherMap & Cat API</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
